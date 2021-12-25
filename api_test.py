@@ -17,7 +17,9 @@ def home():
 def send_voice():
     data = request.form # a multidict containing POST data
 
-    x = "What did you say to me you little shit!? THIS? " + data.get("myField")
+    # Here is custom TTS
+
+    x = "Here is what you said: " + data.get("myField")
     return x
 
 app.run()
